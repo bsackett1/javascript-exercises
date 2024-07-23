@@ -2,13 +2,11 @@ const removeFromArray = function() {
     let array = arguments[0];
     let toRemove = new Set(Array.prototype.slice.call(arguments, 1));
     let result = [];
-    console.log(array);
     for (const val of array) {
         if (!toRemove.has(val)) {
             result.push(val)
         }
     }
-    console.log(result);
     return result;
 };
 
